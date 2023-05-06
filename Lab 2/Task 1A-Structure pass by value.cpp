@@ -10,7 +10,6 @@ struct student{
 void print(student);
 int main(){
     student student;
-    system("cls");
     cout<<"Enter Your Name: ";
     getline(cin, student.name);
     cout<<"Enter Your Father Name: ";
@@ -20,11 +19,9 @@ int main(){
     cout<<"Enter Your Roll Number: ";
     cin>>student.rollno;
     print(student);
-    system("pause");
     return 0;
 }
 void print(student candidate){
-    system("cls");
     cout<<"Student Name: "<<candidate.name<<endl;
     cout<<"Student Father Name: "<<candidate.fname<<endl;
     cout<<"Student Age: "<<candidate.age<<endl;

@@ -18,17 +18,13 @@ struct information{
 };
 void print(information);
 int main(){
-    system("cls");
     information Abdullah = {{"Muhmmad Abdullah" , "Zahid Mehmood", "Male", 18},{"Computer Science",525,2022,3.29}};
     information AbuBakar = {{"Muhammad Abu Bakar", "Zahid Mehmood", "Male", 14},{"Software Engineering", 00, 2026, 00.0}};
-    system("pause");
     print(Abdullah);
     print(AbuBakar);
-    system("pause");
     return 0;
 }
 void print(information info){
-    system("cls");
     cout<<"Name: "<<info.basic.name<<endl;
     cout<<"Father Name: "<<info.basic.fname<<endl;
     cout<<"Gender: "<<info.basic.gender<<endl;
@@ -37,5 +33,4 @@ void print(information info){
     cout<<"Roll No.: "<<info.academic.rollno<<endl;
     cout<<"Session: "<<info.academic.session<<endl;
     cout<<"CGPA: "<<info.academic.cgpa<<endl;
-    system("pause");
 }

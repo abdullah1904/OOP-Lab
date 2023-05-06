@@ -11,7 +11,6 @@ struct car{
 void print(car*);
 void change(car*);
 int main(){
-    system("cls");
     car Mycar = {"Ford", "Mustang", 315, 350,"$100 000"};
     print(&Mycar);
     change(&Mycar);
@@ -19,16 +18,13 @@ int main(){
     return 0;
 }
 void print(car *cars){
-    system("cls");
     cout<<"Brand: "<<(cars->brand)<<endl;
     cout<<"Model: "<<(cars->model)<<endl;
     cout<<"Horse Power: "<<(cars->hp)<<endl;
     cout<<"Torque: "<<(cars->torque)<<endl;
     cout<<"Price: "<<(cars->price)<<endl;
-    system("pause");
 }
 void change(car *car){
-    system("cls");
     cout<<"Enter New Car Brand Name: ";
     getline(cin, car->brand);
     cout<<"Enter New Car Model Name: ";

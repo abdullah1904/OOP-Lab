@@ -10,7 +10,6 @@ struct student{
 void print(student);
 void change(student &);
 int main(){
-    system("cls");
     student student = {"Abdullah", "Zahid" , 00, 00};
     print(student);
     change(student);
@@ -18,7 +17,6 @@ int main(){
     return 0;
 }
 void change(student &candidate){
-    system("cls");
     cout<<" --: Change Information :--"<<endl;
     cout<<"Enter New Name: ";
     getline(cin,candidate.name);
@@ -30,10 +28,8 @@ void change(student &candidate){
     cin>>candidate.rollno;
 }
 void print(student candidate){
-    system("cls");
     cout<<"Student Name: "<<candidate.name<<endl;
     cout<<"Student Father Name: "<<candidate.fname<<endl;
     cout<<"Student Age: "<<candidate.age<<endl;
     cout<<"Student Roll Number: "<<candidate.rollno<<endl;
-    system("pause");
 }

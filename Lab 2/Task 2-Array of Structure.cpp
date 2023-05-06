@@ -11,7 +11,7 @@ void print(soilder[], int);
 int main()
 {
   int n = 5;
-  soilder team[n] = {
+  soilder team[5] = {
       {"Muhammad Abdullah", "Lt. Col.", "Pakistan"},
       {"Tahir Masood Bhutta", "Maj. Gen.", "Pakistan"},
       {"Tariq Mehmmod", "Brig. Gen.", "Pakistan"},
