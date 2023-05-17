@@ -1,7 +1,6 @@
 #ifndef Task5file
 #define Task5file
 
-#include <iostream>
 #include <string>
 class player
 {

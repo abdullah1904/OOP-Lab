@@ -40,12 +40,12 @@ void player :: getInfo()
     cin >> odi;
 }
 void player :: printInfo(){
-    cout<<"Player Name: "<<name<<endl;
-    cout<<"Player Country: "<<country<<endl;
-    cout<<"Player Rank: "<<rank<<endl;
-    cout<<"Player Age: "<<age<<endl;
-    cout<<"Player Height: "<<height<<endl;
-    cout<<"Player Weight: "<<weight<<endl;
+    cout<<"Player Name:     "<<name<<endl;
+    cout<<"Player Country:  "<<country<<endl;
+    cout<<"Player Rank:     "<<rank<<endl;
+    cout<<"Player Age:      "<<age<<endl;
+    cout<<"Player Height:   "<<height<<endl;
+    cout<<"Player Weight:   "<<weight<<endl;
     cout<<"Player T20 Runs: "<<t20<<endl;
     cout<<"Player ODI Runs: "<<odi<<endl;
 }
