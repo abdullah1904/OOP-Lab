@@ -5,12 +5,8 @@ class resident
 private:
     static int age;
 public:
-    resident(){
-        age++;
-    }
-    int display(){
-        return age;
-    }
+    resident();
+    int display();
 };
 int resident :: age = 0;
 int main()
@@ -22,4 +18,10 @@ int main()
     resident r3;
     cout<<"Employee Age of Resident 3: "<<r3.display()<<endl;
     return 0;
+}
+resident :: resident(){
+    age++;
+}
+int resident :: display(){
+    return age;
 }

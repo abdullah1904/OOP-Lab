@@ -9,6 +9,16 @@ private:
     float height, weight;
 
 public:
+    player(string Name = "", string Country = "", int Age = 0, int T20 = 00, int Odi = 00,int Rank =00, int Height = 00, int Weigth = 00) {
+        name = Name; 
+        country = Country;
+        age = Age;
+        t20 = T20;
+        odi = Odi;
+        rank = Rank;
+        height = Height;
+        weight = Weigth;
+    }
     void getInfo();
     void printInfo();
 };
@@ -17,6 +27,10 @@ int main()
     player babarAzam;
     babarAzam.getInfo();
     babarAzam.printInfo();
+    player abDeviller("Ab Deviller", "South Africa");
+    player viratKholi("Virat Kholi", "India", 34, 240, 525);
+    abDeviller.printInfo();
+    viratKholi.printInfo();
     return 0;
 }
 void player :: getInfo()

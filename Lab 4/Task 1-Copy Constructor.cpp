@@ -7,30 +7,11 @@ private:
 int age;
 string name, fname, city;
 public:
-person(): name(""), fname(""),age(00),city(""){}
+person();
+person(person&);
 ~person(){}
-person(person &per){
-    name = per.name;
-    fname = per.fname;
-    age = per.age;
-    city = per.city;
-}
-void get(){
-    cout<<"Enter Name: ";
-    getline(cin,name);
-    cout<<"Enter Father Name: ";
-    getline(cin,fname);
-    cout<<"Enter City Name: ";
-    getline(cin,city);
-    cout<<"Enter Age: ";
-    cin>>age;
-}
-void print(){
-    cout<<"Name: "<<name<<endl;
-    cout<<"Father Name: "<<fname<<endl;
-    cout<<"Age: "<<age<<endl;
-    cout<<"City: "<<city<<endl;
-}
+void get();
+void print();
 };
 int main()
 {
@@ -40,4 +21,32 @@ int main()
     Abdullah.print();
     abdullah.print();
     return 0;
+}
+person :: person(){
+    name = "";
+    fname = "";
+    age = 00;
+    city = "";
+}
+person :: person(person &per){
+    name = per.name;
+    fname = per.fname;
+    age = per.age;
+    city = per.city;
+}
+void person :: print(){
+    cout<<"Name: "<<name<<endl;
+    cout<<"Father Name: "<<fname<<endl;
+    cout<<"Age: "<<age<<endl;
+    cout<<"City: "<<city<<endl;
+}
+void person :: get(){
+    cout<<"Enter Name: ";
+    getline(cin>>ws,name);
+    cout<<"Enter Father Name: ";
+    getline(cin>>ws,fname);
+    cout<<"Enter City Name: ";
+    getline(cin>>ws,city);
+    cout<<"Enter Age: ";
+    cin>>age;
 }

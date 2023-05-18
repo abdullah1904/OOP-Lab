@@ -2,16 +2,12 @@
 using namespace std;
 class client{
 public:
-client(){}
-void get(int a, string s){
-    clientNo = a;
-    project = s;
+client(){
+    clientNo = 0;
+    project = "";
 }
-void print(){
-    cout<<" --: Client Order :-- "<<endl<<endl; 
-    cout<<"Client No: "<<clientNo<<endl;
-    cout<<"Project Type: "<<project<<endl<<endl;
-}
+void get(int,string);
+void print();
 private:
 int clientNo;
 string project;
@@ -42,4 +38,13 @@ int main(){
     delete ptr;
     ptr =NULL;
     return 0;
+}
+void client :: print(){
+    cout<<" --: Client Order :-- "<<endl<<endl; 
+    cout<<"Client No: "<<clientNo<<endl;
+    cout<<"Project Type: "<<project<<endl<<endl;
+}
+void client :: get (int a, string s){
+    clientNo = a;
+    project = s;
 }
