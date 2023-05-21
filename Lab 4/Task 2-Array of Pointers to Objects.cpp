@@ -2,10 +2,8 @@
 using namespace std;
 class client{
 public:
-client(){
-    clientNo = 0;
-    project = "";
-}
+client(int = 00, string = "Ali");
+~client();
 void get(int,string);
 void print();
 private:
@@ -20,10 +18,10 @@ int main(){
     for(int i = 0; i<5;i++){
         for(int j =0; j<3;j++){
             if((i+j)%2==0){
-                ptr[i][j].get(i,"Web Development");
+                ptr[i][j].get(i+j,"Web Development");
             }
             else{
-                ptr[i][j].get(i,"Machine Learning");
+                ptr[i][j].get(i+j,"Machine Learning");
             }
         }
     }
@@ -36,8 +34,12 @@ int main(){
         delete[] ptr[i];
     }
     delete ptr;
-    ptr =NULL;
+    ptr = NULL;
     return 0;
+}
+client :: client(int a , string b){
+    clientNo = a;
+    project = b;
 }
 void client :: print(){
     cout<<" --: Client Order :-- "<<endl<<endl; 
@@ -47,4 +49,7 @@ void client :: print(){
 void client :: get (int a, string s){
     clientNo = a;
     project = s;
+}
+client :: ~client(){
+    cout<<"Object Destroyed Successfully"<<endl;
 }

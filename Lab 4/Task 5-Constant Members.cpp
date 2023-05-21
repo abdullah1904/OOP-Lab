@@ -7,7 +7,7 @@ private:
     int age,balance;
     string name, fname,city;
 public:
-    user();
+    user(string = "Abdullah", string = "Zahid", int = 19, int = 1000, string = "Lahore");
     void getInfo();
     int getAmount() const;
     void deposit(int);
@@ -22,14 +22,17 @@ int main()
     Abdullah.deposit(500);
     Abdullah.debit(200);
     Abdullah.print();
+    const user Ali("Ali","Ahamd", 20);
+    Ali.getAmount();
+    Ali.print();
     return 0;
 }
-user :: user(){
-    name = "";
-    fname = "";
-    age = 00;
-    balance = 00;
-    city = "";
+user :: user(string a, string b, int c, int d, string e){
+    name = a;
+    fname = b;
+    age = c;
+    balance = d;
+    city = e;
 }
 void user :: getInfo(){
     cout<<"Enter Name: ";

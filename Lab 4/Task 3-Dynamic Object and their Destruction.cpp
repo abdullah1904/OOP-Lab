@@ -6,8 +6,7 @@ private:
 int age, id;
 string name,fname;
 public:
-Student();
-Student(string,string,int,int);
+Student(string = "Abdullah", string= "Zahid", int=19, int=525);
 ~Student();
 void get();
 void print();
@@ -26,11 +25,11 @@ int main(){
     ptr = NULL;
     return 0;
 }
-Student :: Student(){
-    name = "";
-    fname = "";
-    age = 00;
-    id = 00;
+Student :: Student(string a, string b, int c, int d){
+    name = a;
+    fname = b;
+    age = c;
+    id = d;
 }
 Student :: Student(string Name, string Fname, int Age, int Id){
     name = Name;

@@ -7,7 +7,7 @@ private:
 int age;
 string name, fname, city;
 public:
-person();
+person(string = "Abdullah", string = "Zahid", int = 19, string = "lahore");
 person(person&);
 ~person(){}
 void get();
@@ -22,11 +22,11 @@ int main()
     abdullah.print();
     return 0;
 }
-person :: person(){
-    name = "";
-    fname = "";
-    age = 00;
-    city = "";
+person :: person(string a, string b, int c, string d) {
+    name = a;
+    fname = b;
+    age = c;
+    city = d;
 }
 person :: person(person &per){
     name = per.name;
