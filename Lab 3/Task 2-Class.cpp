@@ -9,7 +9,7 @@ private:
     float height, weight;
 
 public:
-    player(string Name = "", string Country = "", int Age = 0, int T20 = 00, int Odi = 00,int Rank =00, int Height = 00, int Weigth = 00) {
+    player(string Name = "", string Country = "", int Age = 0, int T20 = 00, int Odi = 00,int Rank =00, int Height = 00, int Weight = 00) {
         name = Name; 
         country = Country;
         age = Age;
@@ -17,7 +17,7 @@ public:
         odi = Odi;
         rank = Rank;
         height = Height;
-        weight = Weigth;
+        weight = Weight;
     }
     void getInfo();
     void printInfo();
@@ -54,6 +54,7 @@ void player :: getInfo()
     cin >> odi;
 }
 void player :: printInfo(){
+    cout << " --: Player Information :-- " << endl;
     cout<<"Player Name:     "<<name<<endl;
     cout<<"Player Country:  "<<country<<endl;
     cout<<"Player Rank:     "<<rank<<endl;

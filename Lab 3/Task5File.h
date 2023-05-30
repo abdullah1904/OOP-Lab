@@ -10,6 +10,7 @@ private:
     float height, weight;
 
 public:
+    player(std::string n= "", std::string c = "", int a= 0, int t2= 00, int od= 00,int r=00, int h= 00, int w= 00);
     void getInfo();
     void printInfo();
 };

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Task5File.h"
 using namespace std;
 int main()
@@ -8,6 +9,16 @@ int main()
     viratKholi.printInfo();
     return 0;
 }
+player::player(string Name, string Country, int Age, int T20, int Odi ,int Rank, int Height, int Weight) {
+        name = Name; 
+        country = Country;
+        age = Age;
+        t20 = T20;
+        odi = Odi;
+        rank = Rank;
+        height = Height;
+        weight = Weight;
+    }
 void player ::getInfo()
 {
     cout << " --: Player Information Entry :-- " << endl;

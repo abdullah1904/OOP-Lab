@@ -7,7 +7,9 @@ class solider{
         int age;
         float height, weight;
     public: 
-        solider(string Name = "Muhammad Abdullah",string Fname = "Zahid Mehmood", string Rank = "Lieutenant Colonel",string Battalion = "4th Commando Battalion", string Course = "17th PMA L/C", string Id = "PA-1904",int Age = 30, double Height = 5.9, double Weight = 75.7, string WW = "Yes"){
+        solider(string Name = "Muhammad Abdullah",string Fname = "Zahid Mehmood", 
+            string Rank = "Lieutenant Colonel",string Battalion = "4th Commando Battalion", 
+            string Course = "17th PMA L/C", string Id = "PA-1904",int Age = 30, double Height = 5.9, double Weight = 75.7, string WW = "Yes"){
             name = Name;
             fname = Fname;
             rank = Rank;

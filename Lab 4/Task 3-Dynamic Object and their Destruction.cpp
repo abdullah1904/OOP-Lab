@@ -31,12 +31,6 @@ Student :: Student(string a, string b, int c, int d){
     age = c;
     id = d;
 }
-Student :: Student(string Name, string Fname, int Age, int Id){
-    name = Name;
-    fname = Fname;
-    age = Age;
-    id = Id;
-}
 void Student :: get(){
     cout<<" --: Enter Student Information :--"<<endl;
     cout<<"Enter Name: ";
