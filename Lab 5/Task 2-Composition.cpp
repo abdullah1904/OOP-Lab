@@ -1,35 +1,114 @@
 #include <iostream>
+#include <string>
 using namespace std;
-class Student{
+class Mercedes{
 private:
-    string name, fname;
-    int age, standard;
+    string brand,model,make,fuelType,color;
+    int yearOfManufacture, engineCapacity;
 public:
-    Student(string="", string="", int =00, int=00);
+    Mercedes(string="Mercedes Benz",string="S Class",string="German", string="Electrical",string="Black", int=2023, int=1700);
     void display();
     void set();
 };
-class Teacher{
+class BMW{
 private:
-    string name, fname, qualification;
-    int age, experience;
+    string brand,model,make,fuelType,color;
+    int yearOfManufacture, engineCapacity;
 public:
-    Teacher(string="" , string="", string="",int=00, int=00);
+    BMW(string="BMW",string="i8",string="Italy", string="Electrical",string="White-Blue", int=2022, int=1200);
     void display();
     void set();
 };
-class School{
+class showRoom{
 private:
-
+    Mercedes sClass;
+    BMW i8;
 public:
+    void displayAll(){
+    sClass.display();
+    i8.display();
+}
+    void setAll(){
+        sClass.set();
+        i8.set();
+    }
 };
 int main(){
-
+    showRoom Lahore;
+    Lahore.displayAll();
+    Lahore.setAll();
+    Lahore.displayAll();
     return 0;
 }
-Student::Student(string n, string fn, int ag, int std){
-    this->name = n;
-    this->fname =  fn;
-    this->age = ag;
-    this->standard =std;
+Mercedes::Mercedes(string b, string md, string mk, string ft, string c, int ym, int ec){
+    this->brand = b;
+    this->model = md;
+    this->make = mk;
+    this->fuelType = ft;
+    this->color = c;
+    this->yearOfManufacture = ym;
+    this->engineCapacity = ec;
+}
+BMW::BMW(string b, string md, string mk, string ft, string c, int ym, int ec){
+    this->brand = b;
+    this->model = md;
+    this->make = mk;
+    this->fuelType = ft;
+    this->color = c;
+    this->yearOfManufacture = ym;
+    this->engineCapacity = ec;
+}
+void Mercedes::set(){
+    cout<<"     --: Enter Car Details :--   "<<endl;
+    cout<<"Enter Car Brand: ";
+    getline(cin>>ws,this->brand);
+    cout<<"Enter Car Model: ";
+    getline(cin>>ws,this->model);
+    cout<<"Enter Car Make: ";
+    getline(cin>>ws,this->make);
+    cout<<"Enter Car Fuel Type: ";
+    getline(cin>>ws,this->fuelType);
+    cout<<"Enter Car Color: ";
+    getline(cin>>ws,this->color);
+    cout<<"Enter Car Year of Manufacture: ";
+    cin>>yearOfManufacture;
+    cout<<"Enter Car Engine Capacity: ";
+    cin>>engineCapacity;
+}
+void BMW::set(){
+    cout<<"     --: Enter Car Details :--   "<<endl;
+    cout<<"Enter Car Brand: ";
+    getline(cin>>ws,this->brand);
+    cout<<"Enter Car Model: ";
+    getline(cin>>ws,this->model);
+    cout<<"Enter Car Make: ";
+    getline(cin>>ws,this->make);
+    cout<<"Enter Car Fuel Type: ";
+    getline(cin>>ws,this->fuelType);
+    cout<<"Enter Car Color: ";
+    getline(cin>>ws,this->color);
+    cout<<"Enter Car Year of Manufacture: ";
+    cin>>yearOfManufacture;
+    cout<<"Enter Car Engine Capacity: ";
+    cin>>engineCapacity;
+}
+void Mercedes:: display(){
+    cout<<"             --: Car Details :--             "<<endl;
+    cout<<"Car Brand:               "<<this->brand<<endl;
+    cout<<"Car Model:               "<<this->model<<endl;
+    cout<<"Car Make:                "<<this->make<<endl;
+    cout<<"Car Fuel Type:           "<<this->fuelType<<endl;
+    cout<<"Car Color:               "<<this->color<<endl;
+    cout<<"Car Year of Manufacture: "<<this->yearOfManufacture<<endl;
+    cout<<"Car Engine Capacity:     "<<this->engineCapacity<<endl<<endl;
+}
+void BMW:: display(){
+    cout<<"             --: Car Details :--             "<<endl;
+    cout<<"Car Brand:               "<<this->brand<<endl;
+    cout<<"Car Model:               "<<this->model<<endl;
+    cout<<"Car Make:                "<<this->make<<endl;
+    cout<<"Car Fuel Type:           "<<this->fuelType<<endl;
+    cout<<"Car Color:               "<<this->color<<endl;
+    cout<<"Car Year of Manufacture: "<<this->yearOfManufacture<<endl;
+    cout<<"Car Engine Capacity:     "<<this->engineCapacity<<endl<<endl;
 }

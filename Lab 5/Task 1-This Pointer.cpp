@@ -6,7 +6,7 @@ private:
     string name, car;
     int age, id;
 public:
-    Driver(string="", string ="", int=00, int=00);
+    Driver(string="Ali", string ="Corolla", int=29, int=123);
     void set();
     void print();
 };
