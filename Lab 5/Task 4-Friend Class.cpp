@@ -16,7 +16,7 @@ public:
         cout<<"Name:        "<<ep.name<<endl;
         cout<<"Father Name: "<<ep.fname<<endl;
         cout<<"City:        "<<ep.city<<endl;
-        cout<<"Age:         "<<ep.city<<endl;
+        cout<<"Age:         "<<ep.age<<endl;
         cout<<"Salary:      "<<ep.salary<<endl;
     }
 };
