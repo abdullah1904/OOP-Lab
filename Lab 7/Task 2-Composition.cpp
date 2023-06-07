@@ -21,23 +21,24 @@ public:
 };
 class showRoom{
 private:
-    Mercedes sClass;
-    BMW i8;
+    Mercedes S8;
+    BMW m5;
 public:
-    void displayAll(){
-    sClass.display();
-    i8.display();
-}
-    void setAll(){
-        sClass.set();
-        i8.set();
+    showRoom(string mec = "Mercedes", string bmw = "BMW"): S8(mec), m5(bmw) {}
+    showRoom& displayAll(){
+        S8.display();
+        m5.display();
+        return *this;
+    }
+    showRoom& setAll(){
+        S8.set();
+        m5.display();
+        return *this;
     }
 };
 int main(){
     showRoom Lahore;
-    Lahore.displayAll();
-    Lahore.setAll();
-    Lahore.displayAll();
+    Lahore.displayAll().setAll().displayAll();
     return 0;
 }
 Mercedes::Mercedes(string b, string md, string mk, string ft, string c, int ym, int ec){

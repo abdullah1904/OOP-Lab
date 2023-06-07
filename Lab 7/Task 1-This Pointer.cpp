@@ -7,14 +7,12 @@ private:
     int age, id;
 public:
     Driver(string="Ali", string ="Corolla", int=29, int=123);
-    void set();
-    void print();
+    Driver& set();
+    Driver& print();
 };
 int main(){
     Driver D1("Abdullah", "Audi S8", 19, 525);
-    D1.print();
-    D1.set();
-    D1.print();
+    D1.print().set().print();
     return 0;
 }
 Driver::Driver(string n, string c, int a, int iD){
@@ -23,7 +21,7 @@ Driver::Driver(string n, string c, int a, int iD){
     this->age = a;
     this->id = iD;
 }
-void Driver :: set(){
+Driver& Driver :: set(){
     cout<<" --: Enter Driver Information :--"<<endl;
     cout<<"Enter Name: ";
     getline(cin>>ws,this->name);
@@ -33,11 +31,13 @@ void Driver :: set(){
     getline(cin>>ws,this->car);
     cout<<"Enter Id: ";
     cin>>this->id;
+    return *this;
 }
-void Driver :: print(){
+Driver& Driver :: print(){
     cout<<" --: Driver Informaion :-- "<<endl; 
     cout<<"Name:    "<<this->name<<endl;
     cout<<"Age:     "<<this->age<<endl;
     cout<<"Car:     "<<this->car<<endl;
     cout<<"ID:      "<<this->id<<endl;
+    return *this;
 }
