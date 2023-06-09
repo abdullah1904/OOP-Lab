@@ -8,6 +8,9 @@ private:
 public:
     employee(string="Abdullah", int=525);
     void showData();
+    ~employee(){
+        cout<<"Base Object Destroyed"<<endl;
+    }
 };
 class manager : public employee{
 private:
@@ -16,6 +19,9 @@ private:
 public:
     manager(string="Abdullah",string="Boss",int=525, int=100);
     void showData();
+    ~manager(){
+        cout<<"Derived Object Destroyed"<<endl;
+    }
 };
 int main(){
     employee Abdullah;

@@ -2,7 +2,8 @@
 using namespace std;
 class base{
 public:
-    virtual void print(){
+    virtual void display()=0;
+    void print(){
         cout<<"Base Class"<<endl;
     }
 };
@@ -27,10 +28,11 @@ int main(){
     cin>>n;
     if(n%2==0){
         ptr=&d1;
+        ptr->print();
     }
     else{
         ptr = &d2;
+        ptr->print();
     }
-    ptr->print();
     return 0;
 }
