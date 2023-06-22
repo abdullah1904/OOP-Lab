@@ -31,6 +31,7 @@ int main(){
     return 0;
 }
 employee::employee(string n, int ID){
+    cout << "Base Class" << endl;
     name=n;
     id=ID;
 }
@@ -39,6 +40,7 @@ void employee::showData(){
     cout<<"Id:          "<<id<<endl;
 }
 manager :: manager(string n,string t,int i, int d): employee(n,i){
+    cout << "Derived Class" << endl;
     title=t;
     golfDues=d;
 }
